@@ -7,6 +7,6 @@
         {{event.place.city}}, {{event.place.state}} {{event.place.zip}}
     </mat-card-content>
     <mat-card-actions class="center">
-        <a mat-raised-button href="events" color="primary" >Details</a>
+        <a mat-raised-button href="events" color="primary" [routerLink]="eventDetailRoute">Details</a>
     </mat-card-actions>
 </mat-card>

@@ -10,6 +10,14 @@ export class EventTileComponent implements OnInit {
   @Input()
   event: ProceedingEvent = {} as ProceedingEvent;
 
+  @Input()
+  eventIndex: number = -1
+
+  
+  get eventDetailRoute() : string {
+    return `./event/${this.eventIndex}`
+  }
+  
   ngOnInit (): void {
   }
 }

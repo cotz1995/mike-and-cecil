@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { environment } from 'src/environments/environment'
 import { ProceedingEvent } from '../models/proceeding-event'
+import { EventPlaceService } from '../services/event-place.service'
 
 @Component({
   selector: 'app-home-page',
@@ -10,24 +11,10 @@ import { ProceedingEvent } from '../models/proceeding-event'
 export class HomePageComponent implements OnInit {
   proceedingEvents: ProceedingEvent[] =[]
 
-  ngOnInit (): void {
-    this.populateEvents()
+  constructor(private eventPlaceService: EventPlaceService) {
   }
 
-  populateEvents () {
-    const places = environment.places
-
-    environment.events.forEach(event => {
-      const place = places.get(event.placeKey)
-
-      const proceedingEvent = {
-        name: event.name,
-        place: place,
-        date: event.date,
-        time: event.time
-      } as ProceedingEvent
-
-      this.proceedingEvents.push(proceedingEvent)
-    })
+  ngOnInit (): void {
+    this.proceedingEvents = this.eventPlaceService.getEvents()
   }
 }

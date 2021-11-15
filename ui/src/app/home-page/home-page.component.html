@@ -1,5 +1,5 @@
 <div class="container">
-    <div *ngFor="let event of proceedingEvents">
-        <app-event-tile [event]="event"></app-event-tile>
+    <div *ngFor="let event of proceedingEvents; let i=index">
+        <app-event-tile [event]="event" [eventIndex]="i"></app-event-tile>
     </div>
 </div>

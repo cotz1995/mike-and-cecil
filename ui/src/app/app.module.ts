@@ -10,15 +10,15 @@ import { MatGridListModule } from '@angular/material/grid-list'
 import { MatToolbarModule } from '@angular/material/toolbar'
 
 import { HomePageComponent } from './home-page/home-page.component'
-import { ProceedingsComponent } from './proceedings/proceedings.component'
-import { EventTileComponent } from './event-tile/event-tile.component'
+import { EventTileComponent } from './event-tile/event-tile.component';
+import { EventDetailComponent } from './event-detail/event-detail.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    ProceedingsComponent,
-    EventTileComponent
+    EventTileComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
