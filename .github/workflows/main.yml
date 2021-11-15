@@ -55,6 +55,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
+          aws s3 rm ${{ secrets.AWS_S3_BUCKET_URI }} --region "us-east-1" --recursive
           aws s3 cp ./dist/mike-and-cecil ${{ secrets.AWS_S3_BUCKET_URI }} --region "us-east-1" --recursive --acl public-read --exclude "*" --include "*.js" --content-type text/javascript
           aws s3 cp ./dist/mike-and-cecil ${{ secrets.AWS_S3_BUCKET_URI }} --region "us-east-1" --recursive --acl public-read --exclude "*" --include "*.css" --content-type text/css
           aws s3 cp ./dist/mike-and-cecil ${{ secrets.AWS_S3_BUCKET_URI }} --region "us-east-1" --recursive --acl public-read --exclude "*" --include "*.html" --content-type text/html
