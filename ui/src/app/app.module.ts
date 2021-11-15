@@ -12,13 +12,15 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { HomePageComponent } from './home-page/home-page.component'
 import { EventTileComponent } from './event-tile/event-tile.component'
 import { EventDetailComponent } from './event-detail/event-detail.component'
+import { GoFundMeEmbedComponent } from './go-fund-me-embed/go-fund-me-embed.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     EventTileComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    GoFundMeEmbedComponent
   ],
   imports: [
     BrowserModule,
