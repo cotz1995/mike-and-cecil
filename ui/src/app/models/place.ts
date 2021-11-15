@@ -1,7 +1,7 @@
 export class Place {
-    name: string = '';
-    address: string = '';
-    city: string = '';
-    state: string = '';
-    zip: string = '';
+    name = '';
+    address = '';
+    city = '';
+    state = '';
+    zip = '';
 }

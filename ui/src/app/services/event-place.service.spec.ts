@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing'
 
-import { EventPlaceService } from './event-place.service';
+import { EventPlaceService } from './event-place.service'
 
 describe('EventPlaceService', () => {
-  let service: EventPlaceService;
+  let service: EventPlaceService
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(EventPlaceService);
-  });
+    TestBed.configureTestingModule({})
+    service = TestBed.inject(EventPlaceService)
+  })
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    expect(service).toBeTruthy()
+  })
+})

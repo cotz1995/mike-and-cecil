@@ -1,4 +1,4 @@
-import { Place } from 'src/app/models/place'
+import type { Place } from 'src/app/models/place'
 
 export const environment = {
   production: true,

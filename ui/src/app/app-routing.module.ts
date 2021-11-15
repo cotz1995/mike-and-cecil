@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
+import type { Routes } from '@angular/router'
+import { RouterModule } from '@angular/router'
 import { EventDetailComponent } from './event-detail/event-detail.component'
 import { HomePageComponent } from './home-page/home-page.component'
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   {
-    path: 'event', children: [
-      { path: ':id', component: EventDetailComponent}
+    path: 'event',
+    children: [
+      { path: ':id', component: EventDetailComponent }
     ]
   }
 ]

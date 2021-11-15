@@ -1,21 +1,18 @@
-import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
-import { ProceedingEvent } from '../models/proceeding-event';
+import { Injectable } from '@angular/core'
+import { environment } from 'src/environments/environment'
+import type { ProceedingEvent } from '../models/proceeding-event'
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventPlaceService {
-
-  constructor() { }
-
-  getEvent(index: number){
+  getEvent (index: number) {
     return this.mapFromEnvironmentEvent(environment.events[index])
   }
 
-  getEvents(): ProceedingEvent[] {
+  getEvents (): ProceedingEvent[] {
     const proceedingEvents: ProceedingEvent[] = []
-    environment.events.forEach(event => {   
+    environment.events.forEach(event => {
       const proceedingEvent = this.mapFromEnvironmentEvent(event)
       proceedingEvents.push(proceedingEvent)
     })
@@ -23,7 +20,7 @@ export class EventPlaceService {
     return proceedingEvents
   }
 
-  private mapFromEnvironmentEvent(environmentEvent: any): ProceedingEvent {
+  private mapFromEnvironmentEvent (environmentEvent: any): ProceedingEvent {
     const place = environment.places.get(environmentEvent.placeKey)
 
     return {

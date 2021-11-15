@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { environment } from 'src/environments/environment'
-import { ProceedingEvent } from '../models/proceeding-event'
-import { EventPlaceService } from '../services/event-place.service'
+import type { OnInit } from '@angular/core'
+import { Component } from '@angular/core'
+import type { ProceedingEvent } from '../models/proceeding-event'
+import type { EventPlaceService } from '../services/event-place.service'
 
 @Component({
   selector: 'app-home-page',
@@ -11,8 +11,7 @@ import { EventPlaceService } from '../services/event-place.service'
 export class HomePageComponent implements OnInit {
   proceedingEvents: ProceedingEvent[] =[]
 
-  constructor(private eventPlaceService: EventPlaceService) {
-  }
+  constructor (private eventPlaceService: EventPlaceService) { } // eslint-disable-line
 
   ngOnInit (): void {
     this.proceedingEvents = this.eventPlaceService.getEvents()
