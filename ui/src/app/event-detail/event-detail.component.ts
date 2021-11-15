@@ -1,8 +1,8 @@
 import type { OnInit } from '@angular/core'
 import { Component } from '@angular/core'
-import type { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router' // eslint-disable-line @typescript-eslint/consistent-type-imports
 import { ProceedingEvent } from '../models/proceeding-event'
-import type { EventPlaceService } from '../services/event-place.service'
+import { EventPlaceService } from '../services/event-place.service' // eslint-disable-line @typescript-eslint/consistent-type-imports
 
 @Component({
   selector: 'app-event-detail',
@@ -12,7 +12,7 @@ import type { EventPlaceService } from '../services/event-place.service'
 export class EventDetailComponent implements OnInit {
   event: ProceedingEvent = new ProceedingEvent()
 
-  constructor ( // eslint-disable-line
+  constructor ( // eslint-disable-line no-useless-constructor
     private eventPlaceService: EventPlaceService,
     private route: ActivatedRoute
   ) { }

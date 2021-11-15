@@ -1,7 +1,7 @@
 import type { OnInit } from '@angular/core'
 import { Component } from '@angular/core'
 import type { ProceedingEvent } from '../models/proceeding-event'
-import type { EventPlaceService } from '../services/event-place.service'
+import { EventPlaceService } from '../services/event-place.service' // eslint-disable-line @typescript-eslint/consistent-type-imports
 
 @Component({
   selector: 'app-home-page',
@@ -11,7 +11,7 @@ import type { EventPlaceService } from '../services/event-place.service'
 export class HomePageComponent implements OnInit {
   proceedingEvents: ProceedingEvent[] =[]
 
-  constructor (private eventPlaceService: EventPlaceService) { } // eslint-disable-line
+  constructor (private eventPlaceService: EventPlaceService) { } // eslint-disable-line no-useless-constructor
 
   ngOnInit (): void {
     this.proceedingEvents = this.eventPlaceService.getEvents()
