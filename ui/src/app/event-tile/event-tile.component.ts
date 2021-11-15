@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ProceedingEvent } from '../models/proceeding-event';
+import { Component, Input, OnInit } from '@angular/core'
+import { ProceedingEvent } from '../models/proceeding-event'
 
 @Component({
   selector: 'app-event-tile',
@@ -10,9 +10,6 @@ export class EventTileComponent implements OnInit {
   @Input()
   event: ProceedingEvent = {} as ProceedingEvent;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit (): void {
   }
-
 }

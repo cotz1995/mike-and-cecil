@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
-import { ProceedingEvent } from '../models/proceeding-event';
+import { Component, OnInit } from '@angular/core'
+import { environment } from 'src/environments/environment'
+import { ProceedingEvent } from '../models/proceeding-event'
 
 @Component({
   selector: 'app-home-page',
@@ -8,28 +8,26 @@ import { ProceedingEvent } from '../models/proceeding-event';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
   proceedingEvents: ProceedingEvent[] =[]
-  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
     this.populateEvents()
   }
 
-  populateEvents() {
-    let places = environment.places;
+  populateEvents () {
+    const places = environment.places
 
     environment.events.forEach(event => {
-      let place = places.get(event.placeKey);
+      const place = places.get(event.placeKey)
 
-      let proceedingEvent = {
+      const proceedingEvent = {
         name: event.name,
         place: place,
         date: event.date,
         time: event.time
-      } as ProceedingEvent;
+      } as ProceedingEvent
 
-      this.proceedingEvents.push(proceedingEvent);
-    });
+      this.proceedingEvents.push(proceedingEvent)
+    })
   }
 }
