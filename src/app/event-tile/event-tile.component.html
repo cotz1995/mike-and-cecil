@@ -1,3 +1,12 @@
 <mat-card>
-    <p>event-tile works!</p>
+    <mat-card-title>{{event.name}}</mat-card-title>
+    <mat-card-subtitle>{{event.place.name}}</mat-card-subtitle>
+    <mat-card-content>
+        {{event.date}} {{event.time}}<br/><br/>
+        {{event.place.address}}<br/>
+        {{event.place.city}}, {{event.place.state}} {{event.place.zip}}
+    </mat-card-content>
+    <mat-card-actions class="center">
+        <a mat-raised-button href="events" color="primary" >Details</a>
+    </mat-card-actions>
 </mat-card>

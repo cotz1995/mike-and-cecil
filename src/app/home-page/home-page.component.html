@@ -1,12 +1,5 @@
-<p>home-page works!</p>
-<mat-grid-list cols="3">
-    <mat-grid-tile>
-        <app-event-tile></app-event-tile>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-event-tile></app-event-tile>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-event-tile></app-event-tile>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="container">
+    <div *ngFor="let event of proceedingEvents">
+        <app-event-tile [event]="event"></app-event-tile>
+    </div>
+</div>
