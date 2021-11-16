@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: 'event',
     children: [
-      { path: ':id', component: EventDetailComponent }
+      { path: ':eventKey', component: EventDetailComponent }
     ]
   }
 ]

@@ -1,8 +1,8 @@
 import type { Place } from './place'
 
-export class ProceedingEvent {
+export class EventPlace {
     name = '';
     date = '';
     time = '';
-    placeKey = '';
+    place: Place = {} as Place;
 }

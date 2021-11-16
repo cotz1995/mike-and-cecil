@@ -4,6 +4,7 @@
     * link to go fund me
     * info about funeral arrangments 
         * embed map?
+            * https://developers.google.com/maps/documentation/embed/map-generator
     *  see all messages on seperate page
 * priority
     1. funeral info
@@ -26,3 +27,5 @@
     * mike-and-cecil.com
 * TODO
     * unit tests
+    * event detail styling...
+    

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import type { ProceedingEvent } from '../models/proceeding-event'
+import type { EventPlace } from '../models/event-place'
 
 @Component({
   selector: 'app-event-tile',
@@ -8,12 +8,12 @@ import type { ProceedingEvent } from '../models/proceeding-event'
 })
 export class EventTileComponent {
   @Input()
-  event: ProceedingEvent = {} as ProceedingEvent;
+  event: EventPlace = {} as EventPlace;
 
   @Input()
-  eventIndex = -1
+  eventKey = ''
 
   get eventDetailRoute () : string {
-    return `./event/${this.eventIndex}`
+    return `./event/${this.eventKey}`
   }
 }

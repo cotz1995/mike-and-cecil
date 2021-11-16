@@ -2,7 +2,7 @@ import type { OnInit } from '@angular/core'
 import { Component } from '@angular/core'
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser' // eslint-disable-line @typescript-eslint/consistent-type-imports
 import { ActivatedRoute } from '@angular/router' // eslint-disable-line @typescript-eslint/consistent-type-imports
-import { ProceedingEvent } from '../models/proceeding-event'
+import { EventPlace } from '../models/event-place'
 import { EventPlaceService } from '../services/event-place.service' // eslint-disable-line @typescript-eslint/consistent-type-imports
 
 @Component({
@@ -11,7 +11,7 @@ import { EventPlaceService } from '../services/event-place.service' // eslint-di
   styleUrls: ['./event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
-  event: ProceedingEvent = new ProceedingEvent()
+  event: EventPlace = new EventPlace()
 
   constructor ( // eslint-disable-line no-useless-constructor
     private eventPlaceService: EventPlaceService,
@@ -24,8 +24,8 @@ export class EventDetailComponent implements OnInit {
   }
 
   getEvent (): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.event = this.eventPlaceService.getEvent(id)
+    const eventKey = this.route.snapshot.paramMap.get('eventKey')
+    this.event = this.eventPlaceService.getEvent(eventKey)
   }
 
   getGMapsUrl () : SafeResourceUrl {
