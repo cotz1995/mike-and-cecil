@@ -1,4 +1,4 @@
-import { KeyValue } from '@angular/common'
+import type { KeyValue } from '@angular/common'
 import type { OnInit } from '@angular/core'
 import { Component } from '@angular/core'
 import type { EventPlace } from '../models/event-place'
@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit {
   }
 
   // HACK: a small hack to display the events in the order they are in the map and thus the environment file
-  compareFn(a: KeyValue<string, EventPlace>, b: KeyValue<string, EventPlace>): number {
+  compareFn (_a: KeyValue<string, EventPlace>, _b: KeyValue<string, EventPlace>): number {
     return 1
   }
 }

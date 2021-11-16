@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core'
 import { environment } from 'src/environments/environment'
 import { EventPlace } from '../models/event-place'
+import type { ProceedingEvent } from '../models/proceeding-event'
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventPlaceService {
   getEvent (key: string | null): EventPlace {
-    if(key === null){
+    if (key === null) {
       console.warn('Searching for null key may cause unexpected results')
       return new EventPlace()
     }
-    return this.mapFromEnvironmentEvent(environment.events.get(key))
+    const proceedingEvent = environment.events.get(key)
+    if (!proceedingEvent) {
+      console.warn('no proceeding event found matching key. may cause unexpected results')
+      return new EventPlace()
+    }
+    return this.mapFromEnvironmentEvent(proceedingEvent)
   }
 
   getEvents (): Map<string, EventPlace> {
@@ -24,7 +30,7 @@ export class EventPlaceService {
     return proceedingEvents
   }
 
-  private mapFromEnvironmentEvent (environmentEvent: any): EventPlace {
+  private mapFromEnvironmentEvent (environmentEvent: ProceedingEvent): EventPlace {
     const place = environment.places.get(environmentEvent.placeKey)
 
     return {

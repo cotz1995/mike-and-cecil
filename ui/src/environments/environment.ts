@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 import type { Place } from 'src/app/models/place'
-import { ProceedingEvent } from 'src/app/models/proceeding-event'
+import type { ProceedingEvent } from 'src/app/models/proceeding-event'
 
 export const environment = {
   production: false,
@@ -34,25 +34,25 @@ export const environment = {
     }]
   ]),
   events: new Map<string, ProceedingEvent>([
-    [ 'visitation', {
+    ['visitation', {
       name: 'Visitation',
       date: '11/11/1111',
       time: '2-4PM',
       placeKey: 'funeralHome'
     }],
-    [ 'service', {
+    ['service', {
       name: 'Service',
       date: '2/2/2222',
       time: '11AM-12PM',
       placeKey: 'funeralHome'
     }],
-    [ 'burial', {
+    ['burial', {
       name: 'Burial',
       date: '4/4/4444',
       time: '12-1PM',
       placeKey: 'cemetary'
     }],
-    [ 'meal', {
+    ['meal', {
       name: 'Meal, etc.',
       date: '3/3/3333',
       time: '6-8PM',
