@@ -8,4 +8,12 @@
             {{event.place.city}}, {{event.place.state}} {{event.place.zip}}
         </p>
     </div>
+    <iframe
+    width="600"
+    height="450"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    [src]="getGMapsUrl()">
+  </iframe>
 </div>

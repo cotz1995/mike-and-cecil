@@ -4,4 +4,5 @@ export class Place {
     city = '';
     state = '';
     zip = '';
+    gMapsPlaceId = '';
 }

@@ -8,25 +8,28 @@ export const environment = {
   production: false,
   places: new Map<string, Place>([
     ['funeralHome', {
-      name: 'funeralHomeName',
-      address: '123 Fake St',
-      city: 'Fake Town',
-      state: 'VA',
-      zip: '11111'
+      name: 'Kurtz Memorial Chapel',
+      address: '102 E Francis Rd',
+      city: 'New Lenox',
+      state: 'IL',
+      zip: '46268',
+      gMapsPlaceId: 'ChIJQ1D4zRtpDogRTPjM-LfSPXg&key=AIzaSyD9wRYEAL78Jkk5pnkCyzXYaWBhQMz9qRY'
     }],
     ['cemetary', {
       name: 'cemetary name',
       address: '456 Fake St',
       city: 'Artificial Town',
       state: 'IN',
-      zip: '22222'
+      zip: '22222',
+      gMapsPlaceId: ''
     }],
     ['afterParty', {
       name: 'party place',
       address: '987 Fake St',
       city: 'Some Other Town',
       state: 'IL',
-      zip: '33333'
+      zip: '33333',
+      gMapsPlaceId: ''
     }]
   ]),
   events: [
