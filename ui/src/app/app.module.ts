@@ -13,6 +13,7 @@ import { HomePageComponent } from './home-page/home-page.component'
 import { EventTileComponent } from './event-tile/event-tile.component'
 import { EventDetailComponent } from './event-detail/event-detail.component'
 import { GoFundMeEmbedComponent } from './go-fund-me-embed/go-fund-me-embed.component'
+import { MessageBoardComponent } from './message-board/message-board.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GoFundMeEmbedComponent } from './go-fund-me-embed/go-fund-me-embed.comp
     HomePageComponent,
     EventTileComponent,
     EventDetailComponent,
-    GoFundMeEmbedComponent
+    GoFundMeEmbedComponent,
+    MessageBoardComponent
   ],
   imports: [
     BrowserModule,
