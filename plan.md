@@ -27,5 +27,7 @@
     * mike-and-cecil.com
 * TODO
     * unit tests
-    * event detail styling...
+    * message dialog styling
+    * message post lambda
+    * message db
     

@@ -1,0 +1,7 @@
+<div #board (resized)="onResized($event)" class="container">
+    <mat-grid-list [cols]="columns" [gutterSize]="gutterSizeStr" [rowHeight]="rowHeightStr">
+        <mat-grid-tile *ngFor="let message of messages" [rowspan]="calculateRowSpan(message)">
+            <mat-card class="card-element" [style]="cardStyle(calculateRowSpan(message))">{{message.message}}</mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
