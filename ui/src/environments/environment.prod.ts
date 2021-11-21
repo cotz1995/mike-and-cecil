@@ -5,54 +5,54 @@ export const environment = {
   production: false,
   places: new Map<string, Place>([
     ['funeralHome', {
-      name: 'Kurtz Memorial Chapel',
-      address: '102 E Francis Rd',
-      city: 'New Lenox',
-      state: 'IL',
-      zip: '46268',
-      gMapsPlaceId: 'ChIJQ1D4zRtpDogRTPjM-LfSPXg&key=AIzaSyD9wRYEAL78Jkk5pnkCyzXYaWBhQMz9qRY'
+      name: 'Miller Funeral Home',
+      address: '3200 Golansky Blvd',
+      city: 'Woodbridge',
+      state: 'VA',
+      zip: '22192',
+      gMapsPlaceId: 'ChIJvzXPZ2pWtokRGXRaGD69dFY'
     }],
-    ['cemetary', {
-      name: 'cemetary name',
-      address: '456 Fake St',
-      city: 'Artificial Town',
-      state: 'IN',
-      zip: '22222',
-      gMapsPlaceId: ''
+    ['cemetery', {
+      name: 'Fairfax Memorial Park',
+      address: '9900 Braddock Rd',
+      city: 'Fairfax',
+      state: 'VA',
+      zip: '22032',
+      gMapsPlaceId: 'ChIJFymcQNVNtokR-UFpRVZBYRk'
     }],
-    ['afterParty', {
-      name: 'party place',
-      address: '987 Fake St',
-      city: 'Some Other Town',
-      state: 'IL',
-      zip: '33333',
-      gMapsPlaceId: ''
+    ['church', {
+      name: 'Holy Family Catholic Church',
+      address: '14160 Ferndale Rd',
+      city: 'Woodbridge',
+      state: 'VA',
+      zip: '22193',
+      gMapsPlaceId: 'ChIJ6UU6bjdWtokR43Ib9Zz4I5A'
     }]
   ]),
   events: new Map<string, ProceedingEvent>([
     ['visitation', {
-      name: 'Visitation',
-      date: '11/11/1111',
-      time: '2-4PM',
+      name: 'Viewing',
+      date: 'TBD',
+      time: 'TBD',
       placeKey: 'funeralHome'
     }],
     ['service', {
-      name: 'Service',
-      date: '2/2/2222',
-      time: '11AM-12PM',
-      placeKey: 'funeralHome'
+      name: 'Funeral Liturgy',
+      date: 'TBD',
+      time: 'TBD',
+      placeKey: 'church'
     }],
     ['burial', {
-      name: 'Burial',
-      date: '4/4/4444',
-      time: '12-1PM',
-      placeKey: 'cemetary'
+      name: 'Burial Service',
+      date: 'TBD',
+      time: 'TBD',
+      placeKey: 'cemetery'
     }],
     ['meal', {
-      name: 'Meal, etc.',
-      date: '3/3/3333',
-      time: '6-8PM',
-      placeKey: 'afterParty'
+      name: 'Reception',
+      date: 'TBD',
+      time: 'TBD',
+      placeKey: 'church'
     }]
   ])
 }
