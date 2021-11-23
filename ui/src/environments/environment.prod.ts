@@ -34,25 +34,29 @@ export const environment = {
       name: 'Viewing',
       date: 'TBD',
       time: 'TBD',
-      placeKey: 'funeralHome'
+      placeKey: 'funeralHome',
+      img: '/assets/images/crucifix.jpg'
     }],
     ['service', {
       name: 'Funeral Liturgy',
       date: 'TBD',
       time: 'TBD',
-      placeKey: 'church'
+      placeKey: 'church',
+      img: '/assets/images/crucifix.jpg'
     }],
     ['burial', {
       name: 'Burial Service',
       date: 'TBD',
       time: 'TBD',
-      placeKey: 'cemetery'
+      placeKey: 'cemetery',
+      img: '/assets/images/crucifix.jpg'
     }],
     ['meal', {
       name: 'Reception',
       date: 'TBD',
       time: 'TBD',
-      placeKey: 'church'
+      placeKey: 'church',
+      img: '/assets/images/crucifix.jpg'
     }]
   ])
 }

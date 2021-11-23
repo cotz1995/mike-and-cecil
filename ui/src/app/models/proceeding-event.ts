@@ -3,4 +3,5 @@ export class ProceedingEvent {
     date = '';
     time = '';
     placeKey = '';
+    img = '';
 }

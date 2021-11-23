@@ -5,4 +5,5 @@ export class EventPlace {
     date = '';
     time = '';
     place: Place = {} as Place;
+    img = '';
 }

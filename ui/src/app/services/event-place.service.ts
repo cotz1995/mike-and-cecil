@@ -37,7 +37,8 @@ export class EventPlaceService {
       name: environmentEvent.name,
       place: place,
       date: environmentEvent.date,
-      time: environmentEvent.time
+      time: environmentEvent.time,
+      img: environmentEvent.img
     } as EventPlace
   }
 }
