@@ -25,9 +25,23 @@
     * aws
 * naming
     * mike-and-cecil.com
-* TODO
-    * unit tests
-    * message dialog styling
-    * message post lambda
-    * message db
+## TODO
+* unit tests
+* message dialog styling
+* message post lambda
+* message db
+### Message Board:
+* save temp message to local storage
+    * delete on successful post
+* update message post disclaimer to include no edits
+* make disclaimer check box text responsive
+
+### Photo board:
+* images
+    * s3 storage
+* api returns image metadata
+* use meta data to generate html
+
+### Other:
+* api key in GitHub
     

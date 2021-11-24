@@ -3,6 +3,7 @@ import type { ProceedingEvent } from 'src/app/models/proceeding-event'
 
 export const environment = {
   production: false,
+  apiUrlRoot: '/api',
   places: new Map<string, Place>([
     ['funeralHome', {
       name: 'Miller Funeral Home',

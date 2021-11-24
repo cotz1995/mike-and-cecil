@@ -2,12 +2,20 @@ import { Injectable } from '@angular/core'
 import type { Observable } from 'rxjs'
 import { of } from 'rxjs'
 import type { Message } from '../models/message'
+import { HttpClient } from '@angular/common/http' // eslint-disable-line @typescript-eslint/consistent-type-imports
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
+  constructor (private http: HttpClient) { } // eslint-disable-line no-useless-constructor
+
   getMessages (): Observable<Message[]> {
+    return this.http.get<Message[]>(`${environment.apiUrlRoot}/`)
+  }
+
+  getMessagesLocal (): Observable<Message[]> {
     return of([
       { id: '1', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
       { id: '2', message: 'Morbi semper lectus ullamcorper tortor malesuada, eu dictum diam iaculis.' },
