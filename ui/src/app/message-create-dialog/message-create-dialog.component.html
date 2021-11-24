@@ -1,13 +1,15 @@
 <div>
     <mat-form-field class="full-width" appearance="fill">
         <mat-label>Leave a message</mat-label>
-        <textarea class="full-width text-area" matInput placeholder=""></textarea>
+        <textarea class="full-width text-area" matInput placeholder="" [(ngModel)]="message"></textarea>
     </mat-form-field>
     <div class="container-flex">
-        <mat-checkbox [(ngModel)]="understandingCheck"> I understand this is a public website<br/> and what I post can be viewed by anyone.</mat-checkbox>
+        <mat-checkbox [(ngModel)]="understandingCheck"> 
+            <p>I understand this is a public website and what I post can be viewed by anyone, and that what I post it cannot be edited or deleted.</p>
+        </mat-checkbox>
     </div>
     <div class="container-flex">
-        <button mat-raised-button [disabled]="!understandingCheck">Submit</button>
-        <button mat-raised-button>Cancel</button>
+        <button mat-raised-button (click)="submitClicked()" [disabled]="!understandingCheck">Submit</button>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
     </div>
 </div>

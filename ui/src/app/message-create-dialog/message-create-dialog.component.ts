@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { MatDialogRef } from '@angular/material/dialog' // eslint-disable-line @typescript-eslint/consistent-type-imports
+import type { Message } from '../models/message'
 
 @Component({
   selector: 'app-message-create-dialog',
@@ -8,10 +9,15 @@ import { MatDialogRef } from '@angular/material/dialog' // eslint-disable-line @
 })
 export class MessageCreateDialogComponent {
   understandingCheck = false
+  message = ''
 
   constructor (public dialogRef: MatDialogRef<MessageCreateDialogComponent>) { } // eslint-disable-line no-useless-constructor
 
-  closeDialog () {
-    this.dialogRef.close('daters')
+  submitClicked () {
+    this.dialogRef.close({
+      id: '',
+      message: this.message,
+      createdDate: new Date(Date.now()).toISOString()
+    } as Message)
   }
 }

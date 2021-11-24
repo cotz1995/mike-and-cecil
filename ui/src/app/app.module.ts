@@ -14,6 +14,7 @@ import { MatExpansionModule } from '@angular/material/expansion'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatInputModule } from '@angular/material/input'
+import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar'
 import { MatToolbarModule } from '@angular/material/toolbar'
 
 import { HomePageComponent } from './home-page/home-page.component'
@@ -51,9 +52,12 @@ import { AngularResizeEventModule } from 'angular-resize-event'
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
+    MatSnackBarModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
