@@ -16,7 +16,7 @@ export class MessageCreateDialogComponent {
   submitClicked () {
     this.dialogRef.close({
       id: '',
-      message: this.message,
+      message: JSON.stringify(this.message),
       createdDate: new Date(Date.now()).toISOString()
     } as Message)
   }
