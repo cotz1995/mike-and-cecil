@@ -15,33 +15,37 @@ export class CardGalleryComponent {
 
   pxToEmRatio = 16
   columns = 1
-  cardWidth = 15
-  rowHeight = 13
-  gutterSize = 1
+  cardWidthEm = 15
+  rowHeightEm = 13
+  minGutterSizeEm = 2
+  gutterSizeEm = this.minGutterSizeEm
+  heightOfSingleCardEm = 10
 
   public get rowHeightStr () {
-    return `${this.rowHeight}em`
+    return `${this.rowHeightEm}em`
   }
 
   public get gutterSizeStr () {
-    return `${this.gutterSize}em`
+    return `${this.gutterSizeEm}em`
   }
 
-  calculateColumns (width: number): number {
-    return Math.trunc(width / (15 * this.pxToEmRatio))
+  calculateColumns (widthPx: number): number {
+    const widthEm = widthPx / this.pxToEmRatio
+    return Math.trunc(widthEm / (this.cardWidthEm + this.minGutterSizeEm))
   }
 
-  calculateGutter (width: number, columns: number): number {
-    if (columns === 1) { return 1 }
+  calculateGutter (widthPx: number, columns: number): number {
+    if (columns === 1) { return this.minGutterSizeEm }
 
-    const columnWidth = width / (columns * this.pxToEmRatio)
-    return columnWidth - this.cardWidth + 1
+    const widthEm = widthPx / this.pxToEmRatio
+    const columnWidthEm = widthEm / columns
+    return columnWidthEm - this.cardWidthEm + this.minGutterSizeEm
   }
 
   onBoardResized (event: ResizedEvent) {
-    const width = event.newRect.width
-    this.columns = this.calculateColumns(width)
-    this.gutterSize = this.calculateGutter(width, this.columns)
+    const widthPx = event.newRect.width
+    this.columns = this.calculateColumns(widthPx)
+    this.gutterSizeEm = this.calculateGutter(widthPx, this.columns)
   }
 
   onMessageResized (event: ResizedEvent, index: number) {
@@ -50,7 +54,7 @@ export class CardGalleryComponent {
 
   calculateRowSpan (heightPx: number): number {
     const heightEm = heightPx / this.pxToEmRatio
-    const rowspan = heightEm / this.rowHeight + 1
+    const rowspan = heightEm / this.rowHeightEm + 1
     return Math.trunc(rowspan)
   }
 
@@ -59,8 +63,7 @@ export class CardGalleryComponent {
   }
 
   cardStyle (rowspan: number): string {
-    const heightOfSingleCard = 10
-    const totalCardHeight = heightOfSingleCard + (rowspan - 1) * (this.rowHeight + this.gutterSize)
+    const totalCardHeight = this.heightOfSingleCardEm + (rowspan - 1) * (this.rowHeightEm + this.gutterSizeEm)
     return `height: ${totalCardHeight}em`
   }
 }
