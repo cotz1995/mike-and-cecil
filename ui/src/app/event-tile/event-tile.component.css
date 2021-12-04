@@ -1,17 +1,22 @@
 mat-card {
-    width: 20em;
-    margin: 1em;
+  width: 20em;
+  margin: 1em;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  img {
-    width: 100%;
-    margin: 0 0 1em 0;
-    box-shadow: 1px 1px 3px;
+img {
+  width: 100%;
+  margin: 0 0 1em 0;
+  box-shadow: 1px 1px 3px;
+}
+
+@media (max-width: 700px) {
+  mat-card {
+    width: 93vw;
   }
-  
+}
