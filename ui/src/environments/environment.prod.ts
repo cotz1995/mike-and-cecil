@@ -32,30 +32,30 @@ export const environment = {
   ]),
   events: new Map<string, ProceedingEvent>([
     ['visitation', {
-      name: 'Viewing',
-      date: 'TBD',
-      time: 'TBD',
+      name: 'Visitation',
+      date: 'Dec. 21, 2021',
+      time: '6:00PM - 9:00PM',
       placeKey: 'funeralHome',
       img: '/assets/images/crucifix.jpg'
     }],
     ['service', {
       name: 'Funeral Liturgy',
-      date: 'TBD',
+      date: 'Dec. 22, 2021',
       time: 'TBD',
       placeKey: 'church',
       img: '/assets/images/crucifix.jpg'
     }],
     ['burial', {
       name: 'Burial Service',
-      date: 'TBD',
+      date: 'Dec. 22, 2021',
       time: 'TBD',
       placeKey: 'cemetery',
       img: '/assets/images/crucifix.jpg'
     }],
     ['meal', {
       name: 'Reception',
-      date: 'TBD',
-      time: 'TBD',
+      date: 'Dec. 22, 2021',
+      time: '5:00PM',
       placeKey: 'church',
       img: '/assets/images/crucifix.jpg'
     }]
