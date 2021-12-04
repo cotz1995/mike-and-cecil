@@ -24,7 +24,8 @@ import { GoFundMeEmbedComponent } from './go-fund-me-embed/go-fund-me-embed.comp
 import { MessageBoardComponent } from './message-board/message-board.component'
 import { MessageCreateDialogComponent } from './message-create-dialog/message-create-dialog.component'
 import { CardGalleryComponent } from './card-gallery/card-gallery.component'
-import { AngularResizeEventModule } from 'angular-resize-event'
+import { AngularResizeEventModule } from 'angular-resize-event';
+import { AnnouncementComponent } from './announcement/announcement.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AngularResizeEventModule } from 'angular-resize-event'
     GoFundMeEmbedComponent,
     MessageBoardComponent,
     MessageCreateDialogComponent,
-    CardGalleryComponent
+    CardGalleryComponent,
+    AnnouncementComponent
   ],
   imports: [
     AngularResizeEventModule,

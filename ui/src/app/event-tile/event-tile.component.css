@@ -17,6 +17,6 @@ img {
 
 @media (max-width: 700px) {
   mat-card {
-    width: 93vw;
+    width: 85vw;
   }
 }
