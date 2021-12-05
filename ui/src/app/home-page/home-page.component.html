@@ -1,5 +1,6 @@
 <div>
     <div class="container">
+        <app-announcement></app-announcement>
         <div *ngFor="let event of proceedingEvents | keyvalue : compareFn">
             <app-event-tile [event]="event.value" [eventKey]="event.key"></app-event-tile>
         </div>

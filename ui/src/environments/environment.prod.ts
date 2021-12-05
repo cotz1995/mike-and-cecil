@@ -41,21 +41,21 @@ export const environment = {
     ['service', {
       name: 'Funeral Liturgy',
       date: 'Dec. 22, 2021',
-      time: 'TBD',
+      time: '10:00AM',
       placeKey: 'church',
       img: '/assets/images/crucifix.jpg'
     }],
     ['burial', {
       name: 'Burial Service',
       date: 'Dec. 22, 2021',
-      time: 'TBD',
+      time: '12:00PM',
       placeKey: 'cemetery',
       img: '/assets/images/crucifix.jpg'
     }],
     ['meal', {
       name: 'Reception',
       date: 'Dec. 22, 2021',
-      time: '5:00PM',
+      time: '1:00PM',
       placeKey: 'church',
       img: '/assets/images/crucifix.jpg'
     }]
