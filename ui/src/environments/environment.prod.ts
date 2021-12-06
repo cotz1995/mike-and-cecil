@@ -36,28 +36,28 @@ export const environment = {
       date: 'Dec. 21, 2021',
       time: '6:00PM - 9:00PM',
       placeKey: 'funeralHome',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/holyfamily.jpg'
     }],
     ['service', {
       name: 'Funeral Liturgy',
       date: 'Dec. 22, 2021',
       time: '10:00AM',
       placeKey: 'church',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/holyfamily.jpg'
     }],
     ['burial', {
       name: 'Burial Service',
       date: 'Dec. 22, 2021',
       time: '12:00PM',
       placeKey: 'cemetery',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/fairfaxmemorial.jpg'
     }],
     ['meal', {
       name: 'Reception',
       date: 'Dec. 22, 2021',
       time: '1:00PM',
       placeKey: 'church',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/fairfaxmemorial.jpg'
     }]
   ])
 }

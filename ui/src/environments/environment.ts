@@ -40,28 +40,28 @@ export const environment = {
       date: '11/11/1111',
       time: '2-4PM',
       placeKey: 'funeralHome',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/holyfamily.jpg'
     }],
     ['service', {
       name: 'Service',
       date: '2/2/2222',
       time: '11AM-12PM',
       placeKey: 'funeralHome',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/holyfamily.jpg'
     }],
     ['burial', {
       name: 'Burial',
       date: '4/4/4444',
       time: '12-1PM',
       placeKey: 'cemetary',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/fairfaxmemorial.jpg'
     }],
     ['meal', {
       name: 'Meal, etc.',
       date: '3/3/3333',
       time: '6-8PM',
       placeKey: 'afterParty',
-      img: '/assets/images/crucifix.jpg'
+      img: '/assets/images/fairfaxmemorial.jpg'
     }]
   ])
 }
