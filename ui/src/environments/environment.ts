@@ -8,6 +8,7 @@ import type { ProceedingEvent } from 'src/app/models/proceeding-event'
 export const environment = {
   production: false,
   apiUrlRoot: 'http://d25dnnfpjwm841.cloudfront.net/dev-api',
+  photosUrlRoot: 'https://mike-and-cecil-photos.s3.amazonaws.com',
   places: new Map<string, Place>([
     ['funeralHome', {
       name: 'Kurtz Memorial Chapel',

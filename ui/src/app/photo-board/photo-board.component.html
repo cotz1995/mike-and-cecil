@@ -1,0 +1,7 @@
+<div>
+    <p>photo-board works!</p>
+    <div *ngFor="let photo of photos">
+        <img [src]="getPhotoUrl(photo.key)" [alt]="photo.key">
+        <p>height: {{photo.height}}, width: {{photo.width}}</p>
+    </div>
+</div>

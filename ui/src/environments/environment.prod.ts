@@ -4,6 +4,7 @@ import type { ProceedingEvent } from 'src/app/models/proceeding-event'
 export const environment = {
   production: false,
   apiUrlRoot: '/api',
+  photosUrlRoot: '/images',
   places: new Map<string, Place>([
     ['funeralHome', {
       name: 'Miller Funeral Home',
