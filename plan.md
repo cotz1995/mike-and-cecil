@@ -40,6 +40,7 @@
 * images
     * s3 storage
 * api returns image metadata
+* store meta data in dynamo db?
 * use meta data to generate html
 
 ### Other:
