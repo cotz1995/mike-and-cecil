@@ -1,25 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import type { ComponentFixture } from '@angular/core/testing'
+import { TestBed } from '@angular/core/testing'
 
-import { PhotoBoardComponent } from './photo-board.component';
+import { PhotoBoardComponent } from './photo-board.component'
 
 describe('PhotoBoardComponent', () => {
-  let component: PhotoBoardComponent;
-  let fixture: ComponentFixture<PhotoBoardComponent>;
+  let component: PhotoBoardComponent
+  let fixture: ComponentFixture<PhotoBoardComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhotoBoardComponent ]
+      declarations: [PhotoBoardComponent]
     })
-    .compileComponents();
-  });
+      .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PhotoBoardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(PhotoBoardComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
