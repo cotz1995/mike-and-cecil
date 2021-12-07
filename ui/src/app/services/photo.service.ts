@@ -14,9 +14,10 @@ export class PhotoService {
   getPhotoKeys (): Observable<Photo[]> {
     return this.http.get<ApiPhoto[]>(`${environment.apiUrlRoot}/photos`).pipe(map(apiPhotos => apiPhotos.map(apiPhoto => {
       return {
+        url: `${environment.photosUrlRoot}/${apiPhoto.key}`,
         key: apiPhoto.key,
-        height: apiPhoto.metadata.height,
-        width: apiPhoto.metadata.width
+        heightPx: apiPhoto.metadata.height,
+        widthPx: apiPhoto.metadata.width
       } as Photo
     })))
   }

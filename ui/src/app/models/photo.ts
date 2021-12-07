@@ -1,5 +1,6 @@
 export class Photo {
+    url = '';
     key = '';
-    height = 0;
-    width = 0;
+    heightPx = 0;
+    widthPx = 0;
 }

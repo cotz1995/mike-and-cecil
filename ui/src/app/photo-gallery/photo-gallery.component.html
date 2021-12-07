@@ -1,0 +1,7 @@
+<div #board (resized)="onBoardResized($event)" class="container">
+    <mat-grid-list [cols]="columns" [gutterSize]="gutterSizeStr" [rowHeight]="rowHeightStr">
+        <mat-grid-tile *ngFor="let photo of photos" [colspan]="getColumnSpan(getResizedDimensions(photo))">
+            <img [src]="photo.url" [width]="getImageWidth(getResizedDimensions(photo))" [height]="getImageHeight(getResizedDimensions(photo))">
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

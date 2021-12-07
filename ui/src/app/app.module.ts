@@ -26,7 +26,8 @@ import { MessageCreateDialogComponent } from './message-create-dialog/message-cr
 import { CardGalleryComponent } from './card-gallery/card-gallery.component'
 import { AngularResizeEventModule } from 'angular-resize-event'
 import { AnnouncementComponent } from './announcement/announcement.component'
-import { PhotoBoardComponent } from './photo-board/photo-board.component'
+import { PhotoBoardComponent } from './photo-board/photo-board.component';
+import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PhotoBoardComponent } from './photo-board/photo-board.component'
     MessageCreateDialogComponent,
     CardGalleryComponent,
     AnnouncementComponent,
-    PhotoBoardComponent
+    PhotoBoardComponent,
+    PhotoGalleryComponent
   ],
   imports: [
     AngularResizeEventModule,
