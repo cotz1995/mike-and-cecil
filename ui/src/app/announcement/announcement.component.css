@@ -2,3 +2,7 @@ mat-card {
     width:85vw;
     margin-top: 1em;
 }
+
+em {
+    font-weight: 500;
+}
