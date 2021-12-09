@@ -5,6 +5,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component'
 import { HomePageComponent } from './home-page/home-page.component'
 import { MessageBoardComponent } from './message-board/message-board.component'
 import { PhotoBoardComponent } from './photo-board/photo-board.component'
+import { RsvpComponent } from './rsvp/rsvp.component'
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
     ]
   },
   { path: 'message-board', component: MessageBoardComponent },
-  { path: 'photo-board', component: PhotoBoardComponent }
+  { path: 'photo-board', component: PhotoBoardComponent },
+  { path: 'rsvp', component: RsvpComponent }
 ]
 
 @NgModule({

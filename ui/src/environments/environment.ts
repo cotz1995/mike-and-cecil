@@ -7,6 +7,8 @@ import type { ProceedingEvent } from 'src/app/models/proceeding-event'
 
 export const environment = {
   production: false,
+  // apiUrlRoot: 'http://aa8e9cac-51d6-4860-ade6-2d8ff701303b.mock.pstmn.io',
+  // photosUrlRoot: 'http://localhost:8000',
   apiUrlRoot: 'http://d25dnnfpjwm841.cloudfront.net/dev-api',
   photosUrlRoot: 'https://mike-and-cecil-photos.s3.amazonaws.com',
   places: new Map<string, Place>([
