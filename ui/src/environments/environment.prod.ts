@@ -45,7 +45,7 @@ export const environment = {
       date: 'Dec. 21, 2021',
       time: '4:00PM - 8:00PM',
       placeKey: 'funeralHome',
-      img: '/assets/images/holyfamily.jpg'
+      img: '/assets/images/miller.jpg'
     }],
     ['service', {
       name: 'Funeral Liturgy',
@@ -65,8 +65,8 @@ export const environment = {
       name: 'Reception',
       date: 'Dec. 22, 2021',
       time: '1:00PM',
-      placeKey: 'venue',
-      img: '/assets/images/fairfaxmemorial.jpg'
+      placeKey: 'church',
+      img: '/assets/images/notredame.jpg'
     }]
   ])
 }
