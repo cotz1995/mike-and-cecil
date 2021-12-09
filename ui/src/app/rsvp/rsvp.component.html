@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-grid-list cols="1" rowHeight="5em">
+        <mat-grid-tile></mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput [formControl]="name" required>
+                <mat-error *ngIf="name.invalid">Name is required</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="person@example.com" [formControl]="email">
+                <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="fill">
+                <mat-label>Phone</mat-label>
+                <input matInput placeholder="15555555555" [formControl]="phone" required>
+                <mat-error *ngIf="phone.invalid">{{getPhoneErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="fill"> 
+                <mat-label>Number of Attendies</mat-label>
+                <input matInput [formControl]="attendies" required>
+                <mat-error *ngIf="attendies.invalid">{{getAttendiesErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <button mat-raised-button [disabled]="!isSubmitEnabled()" (click)="onSubmitClick()">Submit</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

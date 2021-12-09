@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HttpClientModule } from '@angular/common/http'
+
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatCheckboxModule } from '@angular/material/checkbox'
@@ -26,6 +27,9 @@ import { MessageCreateDialogComponent } from './message-create-dialog/message-cr
 import { CardGalleryComponent } from './card-gallery/card-gallery.component'
 import { AngularResizeEventModule } from 'angular-resize-event'
 import { AnnouncementComponent } from './announcement/announcement.component'
+import { PhotoBoardComponent } from './photo-board/photo-board.component'
+import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component'
+import { RsvpComponent } from './rsvp/rsvp.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import { AnnouncementComponent } from './announcement/announcement.component'
     MessageBoardComponent,
     MessageCreateDialogComponent,
     CardGalleryComponent,
-    AnnouncementComponent
+    AnnouncementComponent,
+    PhotoBoardComponent,
+    PhotoGalleryComponent,
+    RsvpComponent
   ],
   imports: [
     AngularResizeEventModule,
@@ -55,7 +62,8 @@ import { AnnouncementComponent } from './announcement/announcement.component'
     MatGridListModule,
     MatInputModule,
     MatSnackBarModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 5000 } }

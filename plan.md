@@ -40,7 +40,9 @@
 * images
     * s3 storage
 * api returns image metadata
+* store meta data in dynamo db?
 * use meta data to generate html
+* put cloud front in front of S3
 
 ### Other:
 * api key in GitHub
