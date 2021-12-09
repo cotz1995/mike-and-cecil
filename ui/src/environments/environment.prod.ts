@@ -65,7 +65,7 @@ export const environment = {
       name: 'Reception',
       date: 'Dec. 22, 2021',
       time: '1:00PM',
-      placeKey: 'church',
+      placeKey: 'venue',
       img: '/assets/images/notredame.jpg'
     }]
   ])
