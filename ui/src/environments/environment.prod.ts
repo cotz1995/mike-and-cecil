@@ -29,27 +29,35 @@ export const environment = {
       state: 'VA',
       zip: '22193',
       gMapsPlaceId: 'ChIJ6UU6bjdWtokR43Ib9Zz4I5A'
+    }],
+    ['venue', {
+      name: 'Stacy C. Sherwood Community Center',
+      address: '3740 Old Lee Highway',
+      city: 'Fairfax',
+      state: 'VA',
+      zip: '22030',
+      gMapsPlaceId: 'ChIJoaLtmJdOtokRyFneVJSRBlM'
     }]
   ]),
   events: new Map<string, ProceedingEvent>([
     ['visitation', {
       name: 'Visitation',
       date: 'Dec. 21, 2021',
-      time: '6:00PM - 9:00PM',
+      time: '4:00PM - 8:00PM',
       placeKey: 'funeralHome',
-      img: '/assets/images/holyfamily.jpg'
+      img: '/assets/images/miller.jpg'
     }],
     ['service', {
       name: 'Funeral Liturgy',
       date: 'Dec. 22, 2021',
-      time: '10:00AM',
+      time: '10:30AM',
       placeKey: 'church',
       img: '/assets/images/holyfamily.jpg'
     }],
     ['burial', {
       name: 'Burial Service',
       date: 'Dec. 22, 2021',
-      time: '12:00PM',
+      time: '12:30PM',
       placeKey: 'cemetery',
       img: '/assets/images/fairfaxmemorial.jpg'
     }],
@@ -58,7 +66,7 @@ export const environment = {
       date: 'Dec. 22, 2021',
       time: '1:00PM',
       placeKey: 'church',
-      img: '/assets/images/fairfaxmemorial.jpg'
+      img: '/assets/images/notredame.jpg'
     }]
   ])
 }
