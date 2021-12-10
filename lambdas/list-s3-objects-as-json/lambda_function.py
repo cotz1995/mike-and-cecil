@@ -11,29 +11,12 @@ def lambda_handler(event, context):
     bucketName = os.environ.get('S3_BUCKET_NAME', 'mike-and-cecil-photos')
     s3 = get_s3(region)
     bucket = s3.Bucket(bucketName)
-    objects = bucket.objects.all()
-    map(lambda x: (x.bucket_name, x.key), objects)
+    objects = list_objects(bucket)
+    keys = map(lambda x: x.key, objects)
 
-    client = boto3.client('s3')
-
-    parsedObjects = []
-    for object in objects:
-        response = client.get_object(
-            Bucket=bucketName,
-            Key=object.key,
-            Range='bytes=0-0'
-        )
-        metaData = json.loads(json.dumps(response['Metadata']))
-
-        parsedObjects.append({
-            'key': object.key,
-            'metadata': metaData
-            })
-         
-        
     result = {
         'statusCode': 200,
-        'body': parsedObjects
+        'body': json.dumps({'keys': list(keys)})
     }
 
     return result
