@@ -5,6 +5,10 @@ mat-card {
 
 }
 
+p {
+    font-size: medium;
+}
+
 em {
     font-weight: 500;
 }
