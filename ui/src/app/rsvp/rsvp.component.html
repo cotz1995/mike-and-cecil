@@ -11,7 +11,7 @@
         <mat-grid-tile>
             <mat-form-field appearance="fill">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="person@example.com" [formControl]="email">
+                <input matInput placeholder="person@example.com" [formControl]="email" required>
                 <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
             </mat-form-field>
         </mat-grid-tile>
@@ -24,8 +24,8 @@
         </mat-grid-tile>
         <mat-grid-tile>
             <mat-form-field appearance="fill"> 
-                <mat-label>Number of Attendies</mat-label>
-                <input matInput [formControl]="attendies" required>
+                <mat-label>Number of Attendees</mat-label>
+                <input matInput [formControl]="attendies" required type=number min="1">
                 <mat-error *ngIf="attendies.invalid">{{getAttendiesErrorMessage()}}</mat-error>
             </mat-form-field>
         </mat-grid-tile>
