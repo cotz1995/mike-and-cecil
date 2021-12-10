@@ -1,0 +1,19 @@
+.message {
+    display: flex;
+    justify-content: center;
+}
+
+mat-card {
+    width: 60vw;
+    margin-top: 1em;
+}
+
+p {
+    font-size: medium;
+}
+
+@media (max-width: 700px) {
+    mat-card {
+        width: 85vw;
+    }
+}
