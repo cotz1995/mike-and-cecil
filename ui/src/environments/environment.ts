@@ -9,8 +9,9 @@ export const environment = {
   production: false,
   // apiUrlRoot: 'http://aa8e9cac-51d6-4860-ade6-2d8ff701303b.mock.pstmn.io',
   // photosUrlRoot: 'http://localhost:8000',
-  apiUrlRoot: 'http://d25dnnfpjwm841.cloudfront.net/dev-api',
-  photosUrlRoot: 'https://mike-and-cecil-photos.s3.amazonaws.com',
+  apiUrlRoot: 'https://d25dnnfpjwm841.cloudfront.net/dev-api',
+  // apiUrlRoot: 'https://iwl6yk3ij9.execute-api.us-east-1.amazonaws.com/dev',
+  photosUrlRoot: 'https://d25dnnfpjwm841.cloudfront.net/dev-images',
   places: new Map<string, Place>([
     ['funeralHome', {
       name: 'Kurtz Memorial Chapel',
