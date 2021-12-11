@@ -1,4 +1,12 @@
-<div>
-    <button mat-raised-button color="primary" (click)="onCreateButtonClicked()">Create</button>
+<div class="background">
+    <div class="message">
+        <mat-card class="message-description">
+            <p>Dear Friends,</p>
+            <p>Here you can leave a message for our mom and dad.  All messages, joyful or sorrowful🌷, long or short📜, funny or moving😂, are welcome.</p>
+            <p>With Love,</p>
+            <p>Garrick & Jude</p>
+        </mat-card>
+    </div>
+    <button mat-raised-button color="primary" (click)="onCreateButtonClicked()">🖊 Create Message</button>
     <app-card-gallery [messages]="messages"></app-card-gallery>
 </div>
