@@ -30,6 +30,7 @@ import { AnnouncementComponent } from './announcement/announcement.component'
 import { PhotoBoardComponent } from './photo-board/photo-board.component'
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component'
 import { RsvpComponent } from './rsvp/rsvp.component'
+import { PhotoUploadDialogComponent } from './photo-upload-dialog/photo-upload-dialog.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { RsvpComponent } from './rsvp/rsvp.component'
     AnnouncementComponent,
     PhotoBoardComponent,
     PhotoGalleryComponent,
-    RsvpComponent
+    RsvpComponent,
+    PhotoUploadDialogComponent
   ],
   imports: [
     AngularResizeEventModule,

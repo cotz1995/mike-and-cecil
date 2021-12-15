@@ -1,7 +1,9 @@
 import type { OnInit } from '@angular/core'
 import { Component } from '@angular/core'
+import { MatDialog } from '@angular/material/dialog' // eslint-disable-line @typescript-eslint/consistent-type-imports
 import { environment } from 'src/environments/environment'
 import type { Photo } from '../models/photo'
+import { PhotoUploadDialogComponent } from '../photo-upload-dialog/photo-upload-dialog.component'
 import { PhotoService } from '../services/photo.service' // eslint-disable-line @typescript-eslint/consistent-type-imports
 
 @Component({
@@ -11,10 +13,15 @@ import { PhotoService } from '../services/photo.service' // eslint-disable-line 
 })
 export class PhotoBoardComponent implements OnInit {
   photos: Photo[] = []
-  constructor (private photoService: PhotoService) { } // eslint-disable-line no-useless-constructor
+
+  // eslint-disable-next-line no-useless-constructor
+  constructor (
+    private photoService: PhotoService,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit (): void {
-    this.photoService.getPhotoKeys().subscribe({
+    this.photoService.getPhotos().subscribe({
       next: photos => {
         this.photos = photos
       }
@@ -23,5 +30,30 @@ export class PhotoBoardComponent implements OnInit {
 
   getPhotoUrl (key: string): string {
     return `${environment.photosUrlRoot}/${key}`
+  }
+
+  onUpoladButtonClicked () {
+    const dialogRef = this.dialog.open(PhotoUploadDialogComponent, {
+      height: '450px',
+      width: '600px'
+    })
+
+    dialogRef.afterClosed().subscribe({
+      // next: result => {
+      // const message = result as Message
+      // if (result && result.message.match(/^\s*$/) === null) { // regex => empty or whitespce
+      //   this.messageService.postMessage(message).subscribe({
+      //     next: () => {
+      //       this.snackBar.open('message successfully posted')
+      //       this.getMessages()
+      //     },
+      //     error: () => {
+      //       console.error('$message post failed')
+      //       this.snackBar.open('ERROR: message post failed')
+      //     }
+      //   })
+      // }
+      // }
+    })
   }
 }

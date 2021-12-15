@@ -1,0 +1,17 @@
+<div>
+    <button mat-raised-button (click)="openFilePicker()" >Choose File</button>
+    <form class="full-width" appearance="fill">
+        <input id="photo-upload-diag-file-input" hidden type="file" class="full-width" (change)="fileSelected($event)" accept=".png,.jpg,.jpeg,.gif,.svg,.bmp">
+    </form>
+    <div class="container-flex">
+        <mat-checkbox [(ngModel)]="understandingCheck">
+            <p>I understand this is a public website and what I post can be viewed by anyone, and that what I post
+                it
+                cannot be edited or deleted.</p>
+        </mat-checkbox>
+    </div>
+    <div class="container-flex">
+        <button mat-raised-button (click)="submitClicked()" [disabled]="!understandingCheck">Submit</button>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
+    </div>
+</div>
